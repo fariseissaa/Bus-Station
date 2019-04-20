@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="626.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bus.station.CustomerController">
+  <children>
+    <ComboBox fx:id="combobox" layoutX="146.0" layoutY="93.0" onAction="#pick" prefHeight="32.0" prefWidth="422.0" promptText="">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="30.0" layoutY="93.0" prefHeight="32.0" prefWidth="96.0" text="My trips">
+      <font>
+        <Font name="System Bold" size="22.0" />
+      </font>
+      <textFill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Button layoutX="30.0" layoutY="482.0" mnemonicParsing="false" onAction="#book" prefHeight="42.0" prefWidth="167.0" text="Book a ticket">
+      <font>
+        <Font size="22.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label layoutX="30.0" layoutY="25.0" text="Welcome back" textFill="$x2">
+      <font>
+        <Font size="36.0" />
+      </font>
+    </Label>
+    <Button font="$x1" layoutX="420.0" layoutY="482.0" mnemonicParsing="false" onAction="#signout" prefHeight="42.0" prefWidth="167.0" text="Signout" />
+    <Label id="driverlabel" fx:id="fromLabel" layoutX="146.0" layoutY="149.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2">
+      <font>
+        <Font size="24.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label id="driverlabel" fx:id="toLabel" font="$x3" layoutX="146.0" layoutY="181.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="dateLabel" font="$x3" layoutX="146.0" layoutY="245.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="vehicleLabel" font="$x3" layoutX="146.0" layoutY="213.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="timeLabel" font="$x3" layoutX="146.0" layoutY="277.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="priceLabel" font="$x3" layoutX="146.0" layoutY="309.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="stopsLabel" font="$x3" layoutX="146.0" layoutY="341.0" minWidth="421.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="149.0" text="From" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="245.0" text="Date" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="181.0" text="To" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="213.0" text="Vehicle" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="277.0" text="Time" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="309.0" text="Price" textFill="$x2" />
+    <Label font="$x3" layoutX="30.0" layoutY="341.0" text="Stops" textFill="$x2" />
+    <Button font="$x1" layoutX="30.0" layoutY="431.0" mnemonicParsing="false" onAction="#delete" prefHeight="42.0" prefWidth="167.0" text="Remove" />
+    <Label id="driverlabel" fx:id="remove" font="$x3" layoutX="200.0" layoutY="431.0" minWidth="314.0" prefHeight="42.0" prefWidth="314.0" text="Removed Successfully" textFill="LIME" visible="false" />
+    <Label id="driverlabel" fx:id="fail" font="$x3" layoutX="200.0" layoutY="431.0" minWidth="314.0" prefHeight="42.0" prefWidth="314.0" text="Please pick a trip" textFill="RED" visible="false" />
+  </children>
+</AnchorPane>

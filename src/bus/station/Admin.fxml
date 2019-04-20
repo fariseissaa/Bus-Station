@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="657.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bus.station.AdminController">
+  <children>
+    <Button layoutX="492.0" layoutY="514.0" minWidth="137.0" mnemonicParsing="false" onAction="#signout" text="Signout">
+      <font>
+        <Font size="24.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button id="edit" font="$x1" layoutX="32.0" layoutY="460.0" minWidth="137.0" mnemonicParsing="false" onAction="#save" text="Save" />
+    <Button id="add" font="$x1" layoutX="192.0" layoutY="514.0" mnemonicParsing="false" onAction="#add" text="Add trips" />
+    <Label layoutX="23.0" layoutY="89.0" text="Trip ID">
+      <font>
+        <Font size="26.0" fx:id="x3" />
+      </font>
+      <textFill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label layoutX="237.0" layoutY="23.0" text="Manegment" textFill="$x2">
+      <font>
+        <Font size="34.0" />
+      </font>
+    </Label>
+    <ComboBox fx:id="combobox" layoutX="122.0" layoutY="89.0" onAction="#pick" prefHeight="35.0" prefWidth="213.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label font="$x3" layoutX="378.0" layoutY="89.0" text="Currently" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="162.0" text="Driver" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="194.0" text="From" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="290.0" text="Date" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="226.0" text="To" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="258.0" text="Vehicle" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="322.0" text="Time" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="354.0" text="Price" textFill="$x2" />
+    <Label font="$x1" layoutX="23.0" layoutY="386.0" text="Stops" textFill="$x2" />
+    <TextField fx:id="fromText" layoutX="122.0" layoutY="194.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField id="to" fx:id="toText" layoutX="122.0" layoutY="226.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField fx:id="driverText" layoutX="122.0" layoutY="162.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField fx:id="timeText" layoutX="122.0" layoutY="322.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField fx:id="dateText" layoutX="122.0" layoutY="290.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField fx:id="vehicleText" layoutX="122.0" layoutY="258.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField id="typeText" fx:id="stopsText" layoutX="122.0" layoutY="386.0" prefHeight="32.0" prefWidth="213.0" />
+    <TextField fx:id="priceText" layoutX="122.0" layoutY="354.0" prefHeight="32.0" prefWidth="213.0" />
+    <Label id="driverlabel" fx:id="driverLabel" font="$x1" layoutX="378.0" layoutY="162.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="fromLabel" font="$x1" layoutX="378.0" layoutY="194.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="toLabel" font="$x1" layoutX="378.0" layoutY="226.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="dateLabel" font="$x1" layoutX="378.0" layoutY="290.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="vehicleLabel" font="$x1" layoutX="378.0" layoutY="258.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="timeLabel" font="$x1" layoutX="378.0" layoutY="322.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="priceLabel" font="$x1" layoutX="378.0" layoutY="354.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label id="driverlabel" fx:id="stopsLabel" font="$x1" layoutX="378.0" layoutY="386.0" prefWidth="213.0" text="" textFill="$x2" />
+    <Label fx:id="success" font="$x1" layoutX="192.0" layoutY="449.0" prefWidth="399.0" text="Saved Successfully" textFill="LIME" visible="false" />
+    <Label id="success" fx:id="fail" font="$x1" layoutX="192.0" layoutY="449.0" prefWidth="399.0" text="Opss, Something went wrong" textFill="RED" visible="false" />
+    <Button id="add" font="$x1" layoutX="32.0" layoutY="514.0" mnemonicParsing="false" onAction="#delete" prefWidth="137.0" text="Delete" />
+    <Label id="success" fx:id="delete" font="$x1" layoutX="192.0" layoutY="449.0" prefWidth="399.0" text="Deleted Successfully" textFill="LIME" visible="false" />
+  </children>
+</AnchorPane>

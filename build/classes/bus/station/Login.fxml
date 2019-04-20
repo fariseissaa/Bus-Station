@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="338.0" prefWidth="626.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bus.station.LoginController">
+  <children>
+    <Label layoutX="218.0" layoutY="19.0" text="Welcome" textFill="#dfdfdf">
+      <font>
+        <Font size="46.0" />
+      </font>
+    </Label>
+    <Label layoutX="33.0" layoutY="100.0" text="Name">
+      <font>
+        <Font size="26.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="33.0" layoutY="146.0" text="Password" textFill="$x2" />
+    <TextField fx:id="name" layoutX="172.0" layoutY="109.0" prefWidth="415.0" />
+    <PasswordField fx:id="password" layoutX="172.0" layoutY="148.0" prefWidth="415.0" />
+    <RadioButton fx:id="admin" layoutX="64.0" layoutY="288.0" mnemonicParsing="false" selected="true" text="Admin" textFill="$x2">
+      <toggleGroup>
+        <ToggleGroup fx:id="people" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="driver" layoutX="248.0" layoutY="288.0" mnemonicParsing="false" text="Driver" textFill="$x2" toggleGroup="$people" />
+    <RadioButton fx:id="customer" layoutX="409.0" layoutY="288.0" mnemonicParsing="false" selected="false" text="Customer" textFill="$x2" toggleGroup="$people" />
+    <Button id="login" font="$x1" layoutX="172.0" layoutY="186.0" mnemonicParsing="false" onAction="#login" text="Login" textFill="BLACK" />
+    <Label fx:id="error" font="$x1" layoutX="174.0" layoutY="243.0" text="Sorry, please try again" textFill="#ff9999" visible="false" />
+  </children>
+</AnchorPane>

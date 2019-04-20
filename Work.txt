@@ -1,0 +1,5 @@
+Faris :
+		all admin's related, all driver's related, files
+Mustafa :
+		all customer's related, login screen, style,
+		

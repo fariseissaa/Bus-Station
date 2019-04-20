@@ -1,0 +1,1 @@
+You have to change the path folder in FileManeger.java in all the functions for the program to work
